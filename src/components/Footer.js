@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { FaDiscord, FaTelegram, FaTwitter } from "react-icons/fa"
 import { animateScroll as scroll } from "react-scroll"
+import Social from "../images/logo.png"
 
 const Footer = () => {
   const toggleHome = () => {
@@ -26,10 +27,10 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/" onClick={toggleHome}>
-              G-102
+              <SocialImg src={Social} />
             </SocialLogo>
             <WebsiteRight>
-              G-102 © {new Date().getFullYear()} All rights reserved.
+              G-2069 © {new Date().getFullYear()} All rights reserved.
             </WebsiteRight>
             <SocialIcons>
               <SocialIconLink1 href="/" target="_blank" arial-label="Twitter">
@@ -155,7 +156,6 @@ const SocialIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 240px;
-
 `
 
 const SocialIconLink1 = styled.a`
@@ -183,7 +183,12 @@ const SocialIconLink3 = styled.a`
   font-size: 24px;
 
   &:hover {
-    color:  #7289d9;
+    color: #7289d9;
     transition: 0.3s ease-out;
   }
+`
+
+export const SocialImg = styled.img`
+  width: 200px;
+  height: 80px;
 `

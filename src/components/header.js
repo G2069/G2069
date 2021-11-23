@@ -2,19 +2,39 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { FaBars } from "react-icons/fa"
-import { menuComponents } from "../data/MenuData"
+import Tippy from "@tippyjs/react"
+import "tippy.js/dist/tippy.css"
+import Logo from "../images/logo.png"
 
 const Header = () => {
   return (
     <Nav>
-      <NavLink to="/">G-102</NavLink>
-      <NavBars />
+      <NavLink to="/">
+        <LogoImg src={Logo} />
+      </NavLink>
+      <MobileIcon>
+        <FaBars />
+      </MobileIcon>
       <NavMenu>
-        {menuComponents.map((item, index) => (
-          <NavLink to={item.link} key={index}>
-            {item.title}
-          </NavLink>
-        ))}
+        <NavItem>
+          <NavLink to="/desktop/">Home</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/desktop/intro">Intro</NavLink>
+        </NavItem>
+        <NavItem>
+          <Tippy content="Coming soon">
+            <NavToolTip>Staking</NavToolTip>
+          </Tippy>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/">Whitepaper</NavLink>
+        </NavItem>
+        <NavItem>
+          <Tippy content="To be announced">
+            <NavToolTip>Presale</NavToolTip>
+          </Tippy>
+        </NavItem>
       </NavMenu>
     </Nav>
   )
@@ -29,8 +49,12 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw-1300px) / 2);
-  z-index: 100;
+  z-index: 10;
   position: relative;
+
+  @media screen and (max-with: 960px) {
+    transition: 0.8s all ease;
+  }
 `
 
 const NavLink = styled(Link)`
@@ -41,27 +65,54 @@ const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  max-width: 200px;
 `
-const NavBars = styled(FaBars)`
-  display: none;
+
+const NavToolTip = styled.div`
+  display: flex;
   color: #fff;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  &:hover span {
+    visibility: visible;
+  }
+`
+
+const MobileIcon = styled.div`
+  display: none;
 
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 75%);
+    transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    color: #fff;
   }
 `
 
-const NavMenu = styled.div`
+const NavMenu = styled.ul`
   display: flex;
   align-items: center;
+  list-style: none;
+  text-align: center;
+  margin-right: 20px;
 
   @media screen and (max-width: 768px) {
     display: none;
   }
+`
+
+export const NavItem = styled.li`
+  height: 80px;
+`
+
+export const LogoImg = styled.img`
+  width: 200px;
+  height: 80px;
 `

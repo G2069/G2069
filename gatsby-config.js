@@ -1,11 +1,11 @@
 module.exports = {
   pathPrefix: "/gatsby-g-102-v1.02",
   siteMetadata: {
-    title: `G-102`,
+    title: `G-2069`,
     //description for search engine optimization
     description: `Your Metaverse World - Start conquering the metaverse.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    author: `@G2069`,
+    siteUrl: `https://g2069.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
