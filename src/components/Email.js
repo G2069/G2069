@@ -1,3 +1,4 @@
+import { navigate } from "gatsby-link"
 import React, { useState } from "react"
 import styled from "styled-components"
 import EmailBg from "../images/email-background.png"
@@ -29,7 +30,7 @@ const Email = () => {
         ...formState,
       }),
     })
-      .then(() => alert("Success"))
+      .then(() => navigate("/thank-you/"))
       .catch(error => alert(error))
   }
 
@@ -38,7 +39,7 @@ const Email = () => {
       <EmailContent>
         <h1>Register</h1>
         <p>To receive latest news of Presale</p>
-        <p>First 100 registra will get whitelisted</p>
+        <p>First 100 registra will get whitelisted!</p>
         <form
           onSubmit={handleSubmit}
           name="contact"

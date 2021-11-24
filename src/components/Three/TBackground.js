@@ -20,7 +20,7 @@ const TBackground = props => {
         fog={false}
         envMapIntensity={0}
       />
-      <Html portal={HtmlContainer} zIndexRange={[1, 0]}>
+      <Html zIndexRange={[1, 0]}>
         <Link to="/mobile/intro">
           <CyberButton />
         </Link>
@@ -30,7 +30,3 @@ const TBackground = props => {
 }
 
 export default TBackground
-
-const HtmlContainer = styled.div`
-z-index: 1;
-`

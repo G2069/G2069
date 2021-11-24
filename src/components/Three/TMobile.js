@@ -1,10 +1,9 @@
 import * as THREE from "three"
 import React, { Suspense, useRef } from "react"
 import { Canvas } from "@react-three/fiber"
-import { Text, useGLTF, PerspectiveCamera } from "@react-three/drei"
+import { Text, useGLTF, PerspectiveCamera, Loader } from "@react-three/drei"
 import {
   EffectComposer,
-  SSAO,
   Bloom,
   Glitch,
 } from "@react-three/postprocessing"
@@ -53,34 +52,13 @@ const Lights = () => {
   )
 }
 
-function Effects() {
-  const ref = useRef()
-  return (
-    <EffectComposer multisampling={8}>
-      <SSAO
-        ref={ref}
-        intensity={15}
-        radius={10}
-        luminanceInfluence={0}
-        bias={0.035}
-      />
-      <Bloom
-        kernelSize={KernelSize.LARGE}
-        luminanceThreshold={0.55}
-        luminanceSmoothing={0.2}
-        intensity={0.67}
-      />
-    </EffectComposer>
-  )
-}
-
 //------------------GLB-MODEL-------------------------------------//
 function TLvbu({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF("/final-scene.glb")
 
   return (
-    <group ref={group} {...props} dispose={null} >
+    <group ref={group} {...props} dispose={null}>
       <group
         name="Camera"
         position={[0.96, 55.97, 132.61]}
@@ -276,6 +254,8 @@ function TLvbu({ ...props }) {
     </group>
   )
 }
+
+useGLTF.preload('/final-scene.glb')
 //------------------END-OF-GLB-MODEL-------------------------------------//
 
 const TMobile = () => {
@@ -285,7 +265,7 @@ const TMobile = () => {
         <color attach="background" args={["lightblue"]} />
         <Lights />
         <Suspense fallback={null}>
-            <TLvbu position={[-0.55, -3.8, 0]} scale={0.05}/>
+          <TLvbu position={[-0.55, -3.8, 0]} scale={0.05} />
           <Text
             position={[0, 1.85, -2]}
             fontSize={0.5}
@@ -330,8 +310,22 @@ const TMobile = () => {
           </Text>
         </Suspense>
         <TBackground />
-        <Effects />
+        <EffectComposer multisampling={5}>
+          <Bloom
+            kernelSize={KernelSize.LARGE}
+            luminanceThreshold={0.55}
+            luminanceSmoothing={0.2}
+            intensity={0.7}
+          />
+          <Glitch
+            delay={[2.5, 4]}
+            duration={[0.2, 0.5]}
+            ratio={[0.1]}
+            strength={[0.01, 0.1]}
+          />
+        </EffectComposer>
       </Canvas>
+      <Loader />
     </ThreeContainer>
   )
 }
@@ -347,7 +341,6 @@ export const ThreeContainer = styled.div`
   color: #fff;
 
   @media screen and (max-width: 768px) {
-    position: 1 1 auto
+    position: 1 1 auto;
   }
 `
-

@@ -1,7 +1,7 @@
 import * as THREE from "three"
 import React, { Suspense, useRef } from "react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
-import { Text, useGLTF, PerspectiveCamera } from "@react-three/drei"
+import { Text, useGLTF, PerspectiveCamera, Loader } from "@react-three/drei"
 import {
   EffectComposer,
   SSAO,
@@ -9,7 +9,6 @@ import {
   Glitch,
 } from "@react-three/postprocessing"
 import { KernelSize, BlendFunction } from "postprocessing"
-import { RectAreaLightUniformsLib } from "three-stdlib"
 import styled from "styled-components"
 import Background from "./Background"
 
@@ -299,6 +298,9 @@ function Lvbu({ ...props }) {
     </group>
   )
 }
+
+useGLTF.preload('/final-scene.glb')
+
 //------------------END-OF-GLB-MODEL-------------------------------------//
 
 const Three = () => {
@@ -355,6 +357,7 @@ const Three = () => {
         <Background />
         <Effects />
       </Canvas>
+      <Loader />
     </ThreeContainer>
   )
 }

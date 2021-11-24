@@ -43,15 +43,13 @@ const SwitchContainer = styled.div`
   height: 968px;
   position: relative;
   z-index: 1;
-  width: 100%;
+  max-width: 1000;
+  margin: 0;
+  padding: 0;
 `
 
 const BgContainer = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 `

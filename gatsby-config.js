@@ -17,6 +17,7 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        icon: `../src/images/logo-196x196.png`
       },
     },
     `gatsby-transformer-sharp`,
@@ -32,7 +33,24 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/coin.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-196x196.png`,
+        icons: [
+          {
+            src: `src/images/logo-16x16.png`,
+            sizes: `16x16`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/logo-32x32.png`,
+            sizes: `32x32`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/logo-196x196.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

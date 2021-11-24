@@ -4,11 +4,14 @@ import { Link } from "gatsby"
 import { FaBars } from "react-icons/fa"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
+import Logo from "../images/logo.png"
 
 const THeader = ({ toggle }) => {
   return (
     <Nav>
-      <NavLink to="/">G-102</NavLink>
+      <NavLink to="/">
+      <LogoImg src={Logo} />
+      </NavLink>
       <NavBars onClick={toggle}>
         <FaBars />
       </NavBars>
@@ -62,10 +65,7 @@ const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-
-  &.active {
-    border-bottom: 3px solid #01bf71;
-  }
+  max-width: 200px;
 `
 
 const NavToolTip = styled.div`
@@ -109,5 +109,10 @@ const NavMenu = styled.ul`
 `
 
 export const NavItem = styled.li`
+  height: 80px;
+`
+
+export const LogoImg = styled.img`
+  width: 200px;
   height: 80px;
 `

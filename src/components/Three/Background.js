@@ -16,7 +16,7 @@ const Background = props => {
         fog={false}
         envMapIntensity={0}
       />
-      <Html>
+      <Html zIndexRange={[1, 0]}>
         <Link to="/desktop/intro">
           <CyberButton />
         </Link>
