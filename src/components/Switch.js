@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Cable from "../images/switch.png"
 import { FaDesktop } from "react-icons/fa"
 import { AiOutlineMobile } from "react-icons/ai"
+import "./switch.css"
 
 const Switch = () => {
   return (
@@ -18,11 +19,11 @@ const Switch = () => {
         </SwitchBox1>
         <SwitchBox2>
           <SwitchBox3>
-            <SwitchCard to='/desktop/'>
+            <SwitchCard to="/desktop/">
               <SwitchPc />
               <SwitchH2>PC</SwitchH2>
             </SwitchCard>
-            <SwitchCard to='/mobile'>
+            <SwitchCard to="/mobile">
               <SwitchMobile />
               <SwitchH2>Mobile</SwitchH2>
             </SwitchCard>
@@ -38,14 +39,12 @@ export default Switch
 const SwitchContainer = styled.div`
   background: #0c0c0c;
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 968px;
   position: relative;
   z-index: 1;
   max-width: 1000;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  justify-content: center;
 `
 
 const BgContainer = styled.div`
@@ -59,6 +58,7 @@ const SwitchBg = styled.img`
   width: 100%;
 `
 const SwitchBox = styled.div`
+  justify-content: center;
   border-radius: 20px;
   background: #000000;
   box-shadow: 6px 6px 12px #000000, -6px -6px 12px #000000;
@@ -87,6 +87,7 @@ const SwitchBox1 = styled.div`
   align-self: auto;
   order: 0;
   height: 30%;
+  margin-top: 20px;
 `
 const SwitchBox2 = styled.div`
   display: block;
@@ -120,7 +121,7 @@ const SwitchCard = styled(Link)`
   margin: 40px 30px;
   text-align: center;
   text-decoration: none;
-  
+
   &:hover {
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
@@ -133,13 +134,13 @@ const SwitchCard = styled(Link)`
 `
 
 const SwitchPc = styled(FaDesktop)`
-color: #000000;
-font-size: 30px;
+  color: #000000;
+  font-size: 30px;
 `
 
 const SwitchMobile = styled(AiOutlineMobile)`
-color: #000000;
-font-size: 30px;
+  color: #000000;
+  font-size: 30px;
 `
 
 const SwitchH1 = styled.h1`
