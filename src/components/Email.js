@@ -37,8 +37,7 @@ const Email = () => {
   return (
     <EmailContainer>
       <EmailContent>
-        <h1>Register</h1>
-        <p>To receive latest news of Presale</p>
+        <p>Register to receive latest news of Presale</p>
         <p>First 100 registra will get whitelisted!</p>
         <form
           onSubmit={handleSubmit}

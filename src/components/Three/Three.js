@@ -316,19 +316,19 @@ const Three = () => {
     background: "rgba(255, 255, 255, 0.1)",
     borderRadius: "100px",
     padding: "0 5px",
-    height: "40px",
-    width: "500px",
+    height: "20px",
+    width: "250px",
   }
 
   const barstyle = {
     boxShadow: "0 10px 40px -10px #5CFFFF",
     borderRadius: "100px",
-    height: "40px",
+    height: "20px",
     background: "#5CFFFF",
   }
 
   const textstyle = {
-    fontSize: "30px",
+    fontSize: "15px",
     alignItems: "center",
   }
   return (
