@@ -8,6 +8,7 @@ import {
   useGLTF,
   PerspectiveCamera,
   useAnimations,
+  Loader,
 } from "@react-three/drei"
 import { ThreeContainer } from "./TMobile"
 
@@ -262,6 +263,30 @@ const Lights = () => {
 }
 
 const Show = () => {
+  const flexstyle = {
+    backgroundColor: "black",
+  }
+
+  const constyle = {
+    background: "rgba(255, 255, 255, 0.1)",
+    borderRadius: "100px",
+    padding: "0 5px",
+    height: "40px",
+    width: "500px",
+  }
+
+  const barstyle = {
+    boxShadow: "0 10px 40px -10px #5CFFFF",
+    borderRadius: "100px",
+    height: "40px",
+    background: "#5CFFFF",
+  }
+
+  const textstyle = {
+    fontSize: "30px",
+    alignItems: "center",
+  }
+
   const scroll = useRef(0)
   const overlay = useRef()
   const caption = useRef()
@@ -283,6 +308,14 @@ const Show = () => {
           <LvbuShow scroll={scroll} />
         </Suspense>
       </Canvas>
+      <Loader
+        containerStyles={flexstyle} // Flex layout styles
+        innerStyles={constyle} // Inner container styles
+        barStyles={barstyle} // Loading-bar styles
+        dataStyles={textstyle} // Text styles
+        dataInterpolation={p => `Loading ${p.toFixed(2)}%`} // Text
+        initialState={active => active} // Initial black out state
+      />
       <Overlay ref={overlay} caption={caption} scroll={scroll} />
     </ThreeContainer>
   )

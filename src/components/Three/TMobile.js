@@ -2,11 +2,7 @@ import * as THREE from "three"
 import React, { Suspense, useRef } from "react"
 import { Canvas } from "@react-three/fiber"
 import { Text, useGLTF, PerspectiveCamera, Loader } from "@react-three/drei"
-import {
-  EffectComposer,
-  Bloom,
-  Glitch,
-} from "@react-three/postprocessing"
+import { EffectComposer, Bloom, Glitch } from "@react-three/postprocessing"
 import { KernelSize } from "postprocessing"
 import { RectAreaLightUniformsLib } from "three-stdlib"
 import styled from "styled-components"
@@ -255,10 +251,33 @@ function TLvbu({ ...props }) {
   )
 }
 
-useGLTF.preload('/final-scene.glb')
+useGLTF.preload("/final-scene.glb")
 //------------------END-OF-GLB-MODEL-------------------------------------//
 
 const TMobile = () => {
+  const flexstyle = {
+    backgroundColor: "black",
+  }
+
+  const constyle = {
+    background: "rgba(255, 255, 255, 0.1)",
+    borderRadius: "100px",
+    padding: "0 5px",
+    height: "40px",
+    width: "500px",
+  }
+
+  const barstyle = {
+    boxShadow: "0 10px 40px -10px #5CFFFF",
+    borderRadius: "100px",
+    height: "40px",
+    background: "#5CFFFF",
+  }
+
+  const textstyle = {
+    fontSize: "30px",
+    alignItems: "center",
+  }
   return (
     <ThreeContainer>
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 4.5], fov: 45 }}>
@@ -325,7 +344,14 @@ const TMobile = () => {
           />
         </EffectComposer>
       </Canvas>
-      <Loader />
+      <Loader
+        containerStyles={flexstyle} // Flex layout styles
+        innerStyles={constyle} // Inner container styles
+        barStyles={barstyle} // Loading-bar styles
+        dataStyles={textstyle} // Text styles
+        dataInterpolation={p => `Loading ${p.toFixed(2)}%`} // Text
+        initialState={active => active} // Initial black out state
+      />
     </ThreeContainer>
   )
 }

@@ -49,9 +49,13 @@ export const Lights = () => {
 
 export function Effects() {
   const ref = useRef()
-  useFrame((state) => {
+  useFrame(state => {
     // Disable SSAO on regress
-    ref.current.blendMode.setBlendFunction(state.performance.current < 1 ? BlendFunction.SKIP : BlendFunction.MULTIPLY)
+    ref.current.blendMode.setBlendFunction(
+      state.performance.current < 1
+        ? BlendFunction.SKIP
+        : BlendFunction.MULTIPLY
+    )
   }, [])
   return (
     <EffectComposer multisampling={8}>
@@ -299,11 +303,34 @@ function Lvbu({ ...props }) {
   )
 }
 
-useGLTF.preload('/final-scene.glb')
+useGLTF.preload("/final-scene.glb")
 
 //------------------END-OF-GLB-MODEL-------------------------------------//
 
 const Three = () => {
+  const flexstyle = {
+    backgroundColor: "black",
+  }
+
+  const constyle = {
+    background: "rgba(255, 255, 255, 0.1)",
+    borderRadius: "100px",
+    padding: "0 5px",
+    height: "40px",
+    width: "500px",
+  }
+
+  const barstyle = {
+    boxShadow: "0 10px 40px -10px #5CFFFF",
+    borderRadius: "100px",
+    height: "40px",
+    background: "#5CFFFF",
+  }
+
+  const textstyle = {
+    fontSize: "30px",
+    alignItems: "center",
+  }
   return (
     <ThreeContainer>
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 4.5], fov: 45 }}>
@@ -357,7 +384,14 @@ const Three = () => {
         <Background />
         <Effects />
       </Canvas>
-      <Loader />
+      <Loader
+        containerStyles={flexstyle} // Flex layout styles
+        innerStyles={constyle} // Inner container styles
+        barStyles={barstyle} // Loading-bar styles
+        dataStyles={textstyle} // Text styles
+        dataInterpolation={p => `Loading ${p.toFixed(2)}%`} // Text
+        initialState={active => active} // Initial black out state
+      />
     </ThreeContainer>
   )
 }
