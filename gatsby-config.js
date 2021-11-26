@@ -6,6 +6,8 @@ module.exports = {
     description: `Your Metaverse World - Start conquering the metaverse.`,
     author: `@G2069`,
     siteUrl: `https://g2069.com`,
+    image:`src/images/seo-image.png`,
+    keywords: `G2069, G-2069, NFT games, best NFT game, Metaverse, Best metaverse game, Play to earn, Play-to-Earn, BNB game, Gamefi, Binance Smart Chain Game`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

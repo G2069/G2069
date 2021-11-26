@@ -109,12 +109,18 @@
   position: relative;
   font-weight: 700;
   border: 0;
-  min-width: 200px;
+  min-width: 175px;
   height: 75px;
   line-height: 75px;
   transition: 0.2s;
   top:350px;
   left:180px;
+}
+
+@media only screen and (max-width: 600px) {
+  .cyber-btn{
+    min-width: 150px;
+  }
 }
 
 .cybr-btn:hover {

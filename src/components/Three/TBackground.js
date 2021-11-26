@@ -2,7 +2,6 @@ import React, { useRef } from "react"
 import { Html } from "@react-three/drei"
 import { Link } from "gatsby"
 import CyberButton from "./CyberButton"
-import styled from "styled-components"
 
 const TBackground = props => {
   const ref = useRef()
@@ -11,7 +10,7 @@ const TBackground = props => {
       {...props}
       ref={ref}
       scale={15}
-      position={[-1, 1, -2]}
+      position={[-1.22, 1.5, -2]}
     >
       <planeGeometry />
       <meshStandardMaterial

@@ -280,7 +280,7 @@ const TMobile = () => {
   }
   return (
     <ThreeContainer>
-      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 4.5], fov: 45 }}>
+      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 5.5], fov: 45 }}>
         <color attach="background" args={["lightblue"]} />
         <Lights />
         <Suspense fallback={null}>
