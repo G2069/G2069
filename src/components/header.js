@@ -17,10 +17,10 @@ const Header = () => {
       </MobileIcon>
       <NavMenu>
         <NavItem>
-          <NavLink to="/desktop/">Home</NavLink>
+          <NavLink to="/">Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/desktop/intro">Intro</NavLink>
+          <NavLink to="/intro">Intro</NavLink>
         </NavItem>
         <NavItem>
           <Tippy content="Coming soon">

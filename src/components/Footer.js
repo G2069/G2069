@@ -33,13 +33,13 @@ const Footer = () => {
               G-2069 © {new Date().getFullYear()} All rights reserved.
             </WebsiteRight>
             <SocialIcons>
-              <SocialIconLink1 href="/" target="_blank" arial-label="Twitter">
+              <SocialIconLink1 href="https://twitter.com/?lang=en" target="_blank" arial-label="Twitter">
                 <FaTwitter />
               </SocialIconLink1>
-              <SocialIconLink2 href="/" target="_blank" arial-label="Telegram">
+              <SocialIconLink2 href="https://t.me/+ssdOu3KiuM40ZmY1" target="_blank" arial-label="Telegram">
                 <FaTelegram />
               </SocialIconLink2>
-              <SocialIconLink3 href="/" target="_blank" arial-label="Discord">
+              <SocialIconLink3 href="https://discord.gg/MjGkMSgWAk" target="_blank" arial-label="Discord">
                 <FaDiscord />
               </SocialIconLink3>
             </SocialIcons>

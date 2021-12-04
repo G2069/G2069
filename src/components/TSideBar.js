@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 
-const TSideBar = ({ isOpen, toggle }) => {
+const SideBar = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -13,22 +13,22 @@ const TSideBar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="/mobile/" onClick={toggle}>
+          <SidebarLink to="/" onClick={toggle}>
             Home
           </SidebarLink>
-          <SidebarLink to="/mobile/intro" onClick={toggle}>
+          <SidebarLink to="/intro" onClick={toggle}>
             Intro
           </SidebarLink>
           <Tippy content="Coming soon">
-            <SidebarLink to="/mobile/" onClick={toggle}>
+            <SidebarLink to="/" onClick={toggle}>
               Staking
             </SidebarLink>
           </Tippy>
-          <SidebarLink to="/mobile/" onClick={toggle}>
+          <SidebarLink to="/" onClick={toggle}>
             Whitepaper
           </SidebarLink>
           <Tippy content="To be announced">
-            <SidebarLink to="/mobile/" onClick={toggle}>
+            <SidebarLink to="/" onClick={toggle}>
               Presale
             </SidebarLink>
           </Tippy>
@@ -38,7 +38,7 @@ const TSideBar = ({ isOpen, toggle }) => {
   )
 }
 
-export default TSideBar
+export default SideBar
 
 export const SidebarContainer = styled.aside`
   position: fixed;

@@ -10,8 +10,7 @@ import {
   useAnimations,
   Loader,
 } from "@react-three/drei"
-import { ThreeContainer } from "./TMobile"
-
+import { ThreeContainer } from "./Three"
 //------------------GLB-MODEL-------------------------------------//
 export function LvbuShow({ scroll, ...props }) {
   const group = useRef()
