@@ -6,15 +6,15 @@ import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 import Logo from "../images/logo.png"
 
-const Header = () => {
+const Header = (toggle) => {
   return (
     <Nav>
       <NavLink to="/">
         <LogoImg src={Logo} />
       </NavLink>
-      <MobileIcon>
+      <NavBars onClick={toggle}>
         <FaBars />
-      </MobileIcon>
+      </NavBars>
       <NavMenu>
         <NavItem>
           <NavLink to="/">Home</NavLink>
@@ -49,7 +49,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw-1300px) / 2);
-  z-index: 10;
+  z-index: 100;
   position: relative;
 
   @media screen and (max-with: 960px) {
@@ -81,7 +81,7 @@ const NavToolTip = styled.div`
   }
 `
 
-const MobileIcon = styled.div`
+const NavBars = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
@@ -89,7 +89,7 @@ const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 75%);
     font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
