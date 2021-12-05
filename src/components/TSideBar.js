@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 
-const SideBar = ({ isOpen, toggle }) => {
+const TSideBar = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -38,7 +38,7 @@ const SideBar = ({ isOpen, toggle }) => {
   )
 }
 
-export default SideBar
+export default TSideBar
 
 export const SidebarContainer = styled.aside`
   position: fixed;

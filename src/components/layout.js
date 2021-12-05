@@ -9,7 +9,7 @@
  import { useState } from "react"
  import { GlobalStyle } from "./styles/Globalstyles"
  import SideBar from "./TSideBar"
- import Header from "./Header"
+ import Header from "./header"
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
