@@ -6,7 +6,7 @@ import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 import Logo from "../images/logo.png"
 
-const Header = (toggle) => {
+const Header = ({toggle}) => {
   return (
     <Nav>
       <NavLink to="/">
