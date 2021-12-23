@@ -5,15 +5,16 @@ import Three from "../components/Three/Three"
 import Email from "../components/Email"
 import Footer from "../components/Footer"
 import TMobile from "../components/Three/TMobile"
+import Socialcard from "../components/Socialcard"
 
 const IndexPage = () => {
   const [isDesktop, setDesktop] = useState(false)
 
-  useEffect(()=>{
-    if(typeof window !== 'undefined'){
+  useEffect(() => {
+    if (typeof window !== "undefined") {
       setDesktop(window.innerWidth > 768)
     }
-  },[])
+  }, [])
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 768)
@@ -25,14 +26,11 @@ const IndexPage = () => {
   })
   return (
     <Layout>
-      <Seo title="Home" />
-      {isDesktop ? (
-        <Three />
-      ) : (
-        <TMobile />
-      )}
+      <Seo title="Home" description='G2069 metaverse' />
+      {isDesktop ? <Three /> : <TMobile />}
       <Email />
       <Footer />
+      <Socialcard />
     </Layout>
   )
 }
