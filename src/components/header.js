@@ -28,7 +28,7 @@ const Header = ({toggle}) => {
           </Tippy>
         </NavItem>
         <NavItem>
-          <NavLink href="https://docs.g2069.com/fundamentals/introduction" target="_blank">Whitepaper</NavLink>
+          <NavLinkOne href="https://docs.g2069.com/fundamentals/introduction" target="_blank">Whitepaper</NavLinkOne>
         </NavItem>
         <NavItem>
           <Tippy content="To be announced">
@@ -58,6 +58,17 @@ const Nav = styled.nav`
 `
 
 const NavLink = styled(Link)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  max-width: 200px;
+`
+
+const NavLinkOne = styled.a`
   color: #fff;
   display: flex;
   align-items: center;

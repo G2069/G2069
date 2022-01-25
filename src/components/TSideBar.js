@@ -24,9 +24,14 @@ const TSideBar = ({ isOpen, toggle }) => {
               Staking
             </SidebarLink>
           </Tippy>
-          <SidebarLink to="/" onClick={toggle}>
+          <SidebarLinkOne
+            onClick={toggle}
+            a
+            href="https://docs.g2069.com/fundamentals/introduction"
+            target="_blank"
+          >
             Whitepaper
-          </SidebarLink>
+          </SidebarLinkOne>
           <Tippy content="To be announced">
             <SidebarLink to="/" onClick={toggle}>
               Presale
@@ -80,12 +85,28 @@ export const SidebarLink = styled(Link)`
   font-size: 1.5rem;
   text-decoration: none;
   transition: 0.2s ease-in-out;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    color: #00ffff;
+    transition: 0.2s ease-in-out;
+  }
+`
+
+export const SidebarLinkOne = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
 
   &:hover {
-    color: #00FFFF;
+    color: #00ffff;
     transition: 0.2s ease-in-out;
   }
 `

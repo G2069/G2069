@@ -18,7 +18,12 @@ const Footer = () => {
             <FooterLinkItems>
               <FooterLinkTitle></FooterLinkTitle>
               <FooterLink to="/">Staking</FooterLink>
-              <FooterLink href="https://docs.g2069.com/fundamentals/introduction" target="_blank">Whitepaper</FooterLink>
+              <FooterLinkOne
+                href="https://docs.g2069.com/fundamentals/introduction"
+                target="_blank"
+              >
+                Whitepaper
+              </FooterLinkOne>
               <FooterLink to="/">Audit</FooterLink>
             </FooterLinkItems>
           </FooterLinkWrapper>
@@ -26,19 +31,31 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/" onClick={toggleHome}>
-              <SocialImg src={Social} />
+              <SocialImg src={Social} alt="G2069Logo" />
             </SocialLogo>
             <WebsiteRight>
               G-2069 © {new Date().getFullYear()} All rights reserved.
             </WebsiteRight>
             <SocialIcons>
-              <SocialIconLink1 href="https://twitter.com/2069G" target="_blank" arial-label="Twitter">
+              <SocialIconLink1
+                href="https://twitter.com/2069G"
+                target="_blank"
+                arial-label="Twitter"
+              >
                 <FaTwitter />
               </SocialIconLink1>
-              <SocialIconLink2 href="https://t.me/+ssdOu3KiuM40ZmY1" target="_blank" arial-label="Telegram">
+              <SocialIconLink2
+                href="https://t.me/+ssdOu3KiuM40ZmY1"
+                target="_blank"
+                arial-label="Telegram"
+              >
                 <FaTelegram />
               </SocialIconLink2>
-              <SocialIconLink3 href="https://discord.gg/MjGkMSgWAk" target="_blank" arial-label="Discord">
+              <SocialIconLink3
+                href="https://discord.gg/MjGkMSgWAk"
+                target="_blank"
+                arial-label="Discord"
+              >
                 <FaDiscord />
               </SocialIconLink3>
             </SocialIcons>
@@ -105,6 +122,17 @@ const FooterLinkTitle = styled.h1`
 `
 
 const FooterLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+
+  &:hover {
+    color: cyan;
+    transition: 0.3s ease-out;
+  }
+`
+const FooterLinkOne = styled.a`
   color: #fff;
   text-decoration: none;
   margin-bottom: 0.5rem;
