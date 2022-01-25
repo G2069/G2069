@@ -28,7 +28,7 @@ const Header = ({toggle}) => {
           </Tippy>
         </NavItem>
         <NavItem>
-          <NavLink to="/">Whitepaper</NavLink>
+          <NavLink href="https://docs.g2069.com/fundamentals/introduction" target="_blank">Whitepaper</NavLink>
         </NavItem>
         <NavItem>
           <Tippy content="To be announced">

@@ -17,9 +17,8 @@ const Footer = () => {
           <FooterLinkWrapper>
             <FooterLinkItems>
               <FooterLinkTitle></FooterLinkTitle>
-              <FooterLink to="/">FAQ</FooterLink>
               <FooterLink to="/">Staking</FooterLink>
-              <FooterLink to="/">Whitepaper</FooterLink>
+              <FooterLink href="https://docs.g2069.com/fundamentals/introduction" target="_blank">Whitepaper</FooterLink>
               <FooterLink to="/">Audit</FooterLink>
             </FooterLinkItems>
           </FooterLinkWrapper>

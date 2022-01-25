@@ -75,7 +75,7 @@ const Overlay = forwardRef(({ scroll }, ref) => (
         <div className="timeline">
           <div className="container right">
             <div className="content">
-              <p>Q4 2021</p>
+              <p>Q1 2022</p>
               <li>Launch of official website</li>
               <li>Release of game trailer</li>
               <li>Presale and IDO</li>
@@ -84,7 +84,7 @@ const Overlay = forwardRef(({ scroll }, ref) => (
           </div>
           <div className="container right">
             <div className="content">
-              <p>Q1 2022</p>
+              <p>Q2 2022</p>
               <li>Land and NFT sale</li>
               <li>Private alpha and beta test</li>
               <li>Release of Farm and PVE mode</li>
@@ -94,7 +94,7 @@ const Overlay = forwardRef(({ scroll }, ref) => (
           </div>
           <div className="container right">
             <div className="content">
-              <p>Q2 2022</p>
+              <p>Q3 2022</p>
               <li>End of Beta Testing</li>
               <li>PVP mode</li>
               <li>Betting system</li>
@@ -104,7 +104,7 @@ const Overlay = forwardRef(({ scroll }, ref) => (
           </div>
           <div className="container right">
             <div className="content">
-              <p>Q3 2022</p>
+              <p>Q4 2022</p>
               <li>Seasonal tournament</li>
               <li>New Season Character</li>
               <li>Launch team PVP mode</li>

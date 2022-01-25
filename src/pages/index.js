@@ -6,6 +6,8 @@ import Email from "../components/Email"
 import Footer from "../components/Footer"
 import TMobile from "../components/Three/TMobile"
 import Socialcard from "../components/Socialcard"
+import { Info, InfoOne } from "../components/Info"
+import { InfoData, InfoDataOne } from "../data/InfoData"
 
 const IndexPage = () => {
   const [isDesktop, setDesktop] = useState(false)
@@ -26,8 +28,10 @@ const IndexPage = () => {
   })
   return (
     <Layout>
-      <Seo title="Home" description='G2069 metaverse' />
+      <Seo title="Home" description="G2069 metaverse" />
       {isDesktop ? <Three /> : <TMobile />}
+      <Info {...InfoData} />
+      <InfoOne {...InfoDataOne} />
       <Email />
       <Footer />
       <Socialcard />

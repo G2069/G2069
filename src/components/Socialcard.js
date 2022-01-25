@@ -6,7 +6,7 @@ const Socialcard = () => {
   return (
     <SocialBar>
       <SocialBox>
-          <SocialList>
+        <SocialList>
           <SocialIconLink1
             href="https://twitter.com/2069G"
             target="_blank"
@@ -14,8 +14,8 @@ const Socialcard = () => {
           >
             <FaTwitter />
           </SocialIconLink1>
-          </SocialList>
-          <SocialList>
+        </SocialList>
+        <SocialList>
           <SocialIconLink2
             href="https://t.me/+ssdOu3KiuM40ZmY1"
             target="_blank"
@@ -23,8 +23,8 @@ const Socialcard = () => {
           >
             <FaTelegram />
           </SocialIconLink2>
-          </SocialList>
-          <SocialList>
+        </SocialList>
+        <SocialList>
           <SocialIconLink3
             href="https://discord.gg/MjGkMSgWAk"
             target="_blank"
@@ -32,7 +32,7 @@ const Socialcard = () => {
           >
             <FaDiscord />
           </SocialIconLink3>
-          </SocialList>
+        </SocialList>
       </SocialBox>
     </SocialBar>
   )
@@ -55,7 +55,13 @@ const SocialBox = styled.div`
   transition: all 0.3s ease;
   color: white;
   font-size: 20px;
-  background-color: lightskyblue;
+  background: rgb(123, 200, 222);
+  background: radial-gradient(
+    circle,
+    rgba(123, 200, 222, 1) 55%,
+    rgba(118, 180, 193, 1) 81%,
+    rgba(98, 152, 163, 1) 97%
+  );
 `
 
 const SocialIconLink1 = styled.a`
@@ -89,6 +95,6 @@ const SocialIconLink3 = styled.a`
 `
 
 const SocialList = styled.li`
-list-style: none;
-margin-top: 5px;
+  list-style: none;
+  margin-top: 5px;
 `
