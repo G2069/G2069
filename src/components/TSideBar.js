@@ -32,7 +32,7 @@ const TSideBar = ({ isOpen, toggle }) => {
           >
             Whitepaper
           </SidebarLinkOne>
-          <Tippy content="To be announced">
+          <Tippy content="On 15th March 2022, 00:00 UTC">
             <SidebarLink to="/" onClick={toggle}>
               Presale
             </SidebarLink>

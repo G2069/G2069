@@ -8,6 +8,7 @@ import TMobile from "../components/Three/TMobile"
 import Socialcard from "../components/Socialcard"
 import ImageSlider from "../components/ImageSlider"
 import Media from "../components/Media"
+import Presaletimer from "../components/Presaletimer"
 
 const IndexPage = () => {
   const [isDesktop, setDesktop] = useState(false)
@@ -30,6 +31,7 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Home" description="G2069 metaverse" />
       {isDesktop ? <Three /> : <TMobile />}
+      <Presaletimer />
       <Media />
       <ImageSlider />
       <Email />

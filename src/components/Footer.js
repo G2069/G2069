@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import { FaDiscord, FaTelegram, FaTwitter } from "react-icons/fa"
 import { animateScroll as scroll } from "react-scroll"
 import Social from "../images/logo.png"
+import Tippy from "@tippyjs/react"
+import "tippy.js/dist/tippy.css"
 
 const Footer = () => {
   const toggleHome = () => {
@@ -16,15 +18,19 @@ const Footer = () => {
         <FooterLinkContainer>
           <FooterLinkWrapper>
             <FooterLinkItems>
-              <FooterLinkTitle></FooterLinkTitle>
+              <Tippy content= 'Coming soon'>
               <FooterLink to="/">Staking</FooterLink>
+              </Tippy>
               <FooterLinkOne
                 href="https://docs.g2069.com/fundamentals/introduction"
                 target="_blank"
               >
                 Whitepaper
               </FooterLinkOne>
+              <Tippy content= 'Contract to be audited after Presale'>
               <FooterLink to="/">Audit</FooterLink>
+              </Tippy>
+              <FooterP>Contact us: support@g2069.com</FooterP>
             </FooterLinkItems>
           </FooterLinkWrapper>
         </FooterLinkContainer>
@@ -116,10 +122,10 @@ const FooterLinkItems = styled.div`
   }
 `
 
-const FooterLinkTitle = styled.h1`
-  font-size: 14px;
-  margin-bottom: 16px;
-`
+// const FooterLinkTitle = styled.h1`
+//   font-size: 14px;
+//   margin-bottom: 16px;
+// `
 
 const FooterLink = styled(Link)`
   color: #fff;
@@ -215,7 +221,13 @@ const SocialIconLink3 = styled.a`
   }
 `
 
-export const SocialImg = styled.img`
+const SocialImg = styled.img`
   width: 200px;
   height: 80px;
+`
+
+const FooterP = styled.p`
+font-size: 20px;
+color: #fff;
+text-align: left;
 `

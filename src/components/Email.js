@@ -37,8 +37,7 @@ const Email = () => {
   return (
     <EmailContainer>
       <EmailContent>
-        <p>Register to receive latest news of Presale</p>
-        <p>First 100 registra will get whitelisted!</p>
+        <p>Register to receive latest news!</p>
         <form
           onSubmit={handleSubmit}
           name="contact"
@@ -109,7 +108,8 @@ const EmailContent = styled.div`
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     padding: 0 1rem;
     margin-bottom: 0.7rem;
-    color: black;
+    color: #000000;
+    font-weight: 600;
   }
 
   form {
