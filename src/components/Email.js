@@ -1,4 +1,3 @@
-import { navigate } from "gatsby-link"
 import React, { useState } from "react"
 import styled from "styled-components"
 import EmailBg from "../images/email-background.png"
@@ -30,7 +29,7 @@ const Email = () => {
         ...formState,
       }),
     })
-      .then(() => navigate("/thank-you/"))
+      .then(() => alert("thank you"))
       .catch(error => alert(error))
   }
 
