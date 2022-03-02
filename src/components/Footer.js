@@ -27,7 +27,7 @@ const Footer = () => {
               >
                 Whitepaper
               </FooterLinkOne>
-              <Tippy content= 'Contract to be audited after Presale'>
+              <Tippy content= 'Coming soon'>
               <FooterLink to="/">Audit</FooterLink>
               </Tippy>
               <FooterP>Contact us: support@g2069.com</FooterP>
