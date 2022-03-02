@@ -78,17 +78,17 @@ const Overlay = forwardRef(({ scroll }, ref) => (
               <p>Q1 2022</p>
               <li>Launch of official website</li>
               <li>Release of game trailer</li>
-              <li>Presale and IDO</li>
+              <li>Presale</li>
               <li>Contract Auditing</li>
             </div>
           </div>
           <div className="container right">
             <div className="content">
               <p>Q2 2022</p>
+              <li>IDO</li>
               <li>Land and NFT sale</li>
-              <li>Private alpha and beta test</li>
+              <li>Alpha and beta test</li>
               <li>Release of Farm and PVE mode</li>
-              <li>Public beta test</li>
               <li>Staking</li>
             </div>
           </div>
@@ -105,7 +105,7 @@ const Overlay = forwardRef(({ scroll }, ref) => (
           <div className="container right">
             <div className="content">
               <p>Q4 2022</p>
-              <li>Seasonal tournament</li>
+              <li>Seasonal ranking</li>
               <li>New Season Character</li>
               <li>Launch team PVP mode</li>
               <li>Development of AR and VR</li>
