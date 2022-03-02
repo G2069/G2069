@@ -53,7 +53,7 @@ const Presaletimer = () => {
         </TimerBg>
         <TimerContent>
           <TimerH1>Presale coming on</TimerH1>
-          <TimerH1>00:00 UTC, 15th March 2022</TimerH1>
+          <TimerH1>00:00 UTC, 15th April 2022</TimerH1>
           <ClockContainer>
             <ClockSection>
               <ClockP>{timerDays}</ClockP>
