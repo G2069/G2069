@@ -46,6 +46,7 @@ const SocialBar = styled.div`
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 4;
 `
 
 const SocialBox = styled.div`

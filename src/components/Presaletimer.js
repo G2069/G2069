@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import styled from "styled-components"
+import Video from "../videos/flow.mp4"
 
 const Presaletimer = () => {
   const [timerDays, setTimerDays] = useState("00")
@@ -48,7 +49,7 @@ const Presaletimer = () => {
     <>
       <TimerContainer>
         <TimerBg>
-          {/* <TimerVid autoPlay loop muted src={Video} type="video/mp4" /> */}
+          <TimerVid autoPlay loop muted src={Video} type="video/mp4" />
         </TimerBg>
         <TimerContent>
           <TimerH1>Presale coming on</TimerH1>
