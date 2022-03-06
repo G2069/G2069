@@ -26,7 +26,7 @@ const Socialcard = () => {
         </SocialList>
         <SocialList>
           <SocialIconLink3
-            href="https://discord.gg/MjGkMSgWAk"
+            href="https://discord.gg/KncxJwWf4K"
             target="_blank"
             arial-label="Discord"
           >
