@@ -6,7 +6,7 @@ module.exports = {
     description: `Your Metaverse World - Start conquering the metaverse.`,
     author: `@G2069`,
     siteUrl: `https://g2069.com`,
-    image:`src/images/seo-image.png`,
+    image: `src/images/seo-image.png`,
     keywords: `G2069, G-2069, NFT games, best NFT game, Metaverse, Best metaverse game, Play to earn, Play-to-Earn, BNB game, Gamefi, Binance Smart Chain Game`,
   },
   plugins: [
@@ -15,18 +15,18 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "G-J97ZZTLCWM",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: true,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-        // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 0,
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-J97ZZTLCWM", // Google Analytics / GA
+        ],
+
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
       },
     },
     {
