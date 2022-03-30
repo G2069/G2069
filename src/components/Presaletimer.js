@@ -11,7 +11,7 @@ const Presaletimer = () => {
   let interval = useRef()
 
   const startTimer = () => {
-    const countdownDate = new Date("April 15, 2022 08:00:00").getTime()
+    const countdownDate = new Date("May 15, 2022 08:00:00").getTime()
 
     interval.current = setInterval(() => {
       const now = new Date().getTime()
@@ -53,7 +53,7 @@ const Presaletimer = () => {
         </TimerBg>
         <TimerContent>
           <TimerH1>Presale coming on</TimerH1>
-          <TimerH1>00:00 UTC, 15th April 2022</TimerH1>
+          <TimerH1>00:00 UTC, 15th May 2022</TimerH1>
           <ClockContainer>
             <ClockSection>
               <ClockP>{timerDays}</ClockP>
