@@ -1,14 +1,16 @@
 import React from "react"
 import "./CyberButton.css"
 import styled from "styled-components"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 const CyberButton = () => {
+  const { t } = useTranslation()
   return (
       <ButtonWrapper>
     <button className="cybr-btn">
-      Explore<span aria-hidden>_</span>
+    {t("explore")}<span aria-hidden>_</span>
       <span aria-hidden className="cybr-btn__glitch">
-        Explore
+      {t("explore")}
       </span>
     </button>
     </ButtonWrapper>

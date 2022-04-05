@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect } from "react"
 import styled from "styled-components"
 import Video from "../videos/flow.mp4"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+
 
 const Presaletimer = () => {
+  const { t } = useTranslation()
   const [timerDays, setTimerDays] = useState("00")
   const [timerHours, setTimerHours] = useState("00")
   const [timerMinutes, setTimerMinutes] = useState("00")
@@ -52,34 +55,34 @@ const Presaletimer = () => {
           <TimerVid autoPlay loop muted src={Video} type="video/mp4" />
         </TimerBg>
         <TimerContent>
-          <TimerH1>Presale coming on</TimerH1>
-          <TimerH1>00:00 UTC, 15th May 2022</TimerH1>
+          <TimerH1>{t("presale coming on")}</TimerH1>
+          <TimerH1>{t("date")}</TimerH1>
           <ClockContainer>
             <ClockSection>
               <ClockP>{timerDays}</ClockP>
               <ClockP>
-                <small>Days</small>
+                <small>{t("days")}</small>
               </ClockP>
             </ClockSection>
             <span>:</span>
             <ClockSection>
               <ClockP>{timerHours}</ClockP>
               <ClockP>
-                <small>Hours</small>
+                <small>{t("hours")}</small>
               </ClockP>
             </ClockSection>
             <span>:</span>
             <ClockSection>
               <ClockP>{timerMinutes}</ClockP>
               <ClockP>
-                <small>Minutes</small>
+                <small>{t("minutes")}</small>
               </ClockP>
             </ClockSection>
             <span>:</span>
             <ClockSection>
               <ClockP>{timerSeconds}</ClockP>
               <ClockP>
-                <small>Seconds</small>
+                <small>{t("seconds")}</small>
               </ClockP>
             </ClockSection>
           </ClockContainer>

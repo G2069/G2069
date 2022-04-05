@@ -5,8 +5,10 @@ import { FaBars } from "react-icons/fa"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 import Logo from "../images/logo.png"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
-const Header = ({toggle}) => {
+const Header = ({ toggle }) => {
+  const { t } = useTranslation()
   return (
     <Nav>
       <NavLink to="/">
@@ -17,22 +19,27 @@ const Header = ({toggle}) => {
       </NavBars>
       <NavMenu>
         <NavItem>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/">{t("home")}</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/intro">Intro</NavLink>
+          <NavLink to="/intro">{t("intro")}</NavLink>
         </NavItem>
         <NavItem>
           <Tippy content="Coming soon">
-            <NavToolTip>Staking</NavToolTip>
+            <NavToolTip>{t("staking")}</NavToolTip>
           </Tippy>
         </NavItem>
         <NavItem>
-          <NavLinkOne href="https://docs.g2069.com/fundamentals/introduction" target="_blank">Whitepaper</NavLinkOne>
+          <NavLinkOne
+            href="https://docs.g2069.com/fundamentals/introduction"
+            target="_blank"
+          >
+            {t("whitepaper")}
+          </NavLinkOne>
         </NavItem>
         <NavItem>
           <Tippy content="On 15th May 2022, 00:00 UTC">
-            <NavToolTip>Presale</NavToolTip>
+            <NavToolTip>{t("presale")}</NavToolTip>
           </Tippy>
         </NavItem>
       </NavMenu>
@@ -40,7 +47,7 @@ const Header = ({toggle}) => {
   )
 }
 
-export default Header
+export default Header;
 
 //styled-components
 const Nav = styled.nav`

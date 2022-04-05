@@ -11,6 +11,7 @@ import {
 import { KernelSize, BlendFunction } from "postprocessing"
 import styled from "styled-components"
 import Background from "./Background"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 export const Lights = () => {
   const lights = useRef()
@@ -308,6 +309,8 @@ useGLTF.preload("/final-scene.glb")
 //------------------END-OF-GLB-MODEL-------------------------------------//
 
 const Three = () => {
+  const { t } = useTranslation()
+
   const flexstyle = {
     backgroundColor: "black",
   }
@@ -354,7 +357,7 @@ const Three = () => {
             color="black"
             font="/Cyberpunk.ttf"
           >
-            NFT
+            {t("nft")}
           </Text>
           <Text
             position={[1.3, 0.6, 0]}
@@ -362,7 +365,7 @@ const Three = () => {
             color="black"
             font="/Cyberpunk.ttf"
           >
-            Play to Earn
+            {t("playtoearn")}
           </Text>
           <Text
             position={[1.3, 0.15, 0]}
@@ -370,7 +373,7 @@ const Three = () => {
             color="black"
             font="/Cyberpunk.ttf"
           >
-            Conquer your metaverse
+            {t("conquer")}
           </Text>
           <Text
             position={[1.3, -0.15, 0]}
@@ -378,7 +381,7 @@ const Three = () => {
             color="black"
             font="/Cyberpunk.ttf"
           >
-            world now
+            {t("world")}
           </Text>
         </Suspense>
         <Background />

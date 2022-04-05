@@ -4,8 +4,10 @@ import { FaTimes } from "react-icons/fa"
 import { Link } from "gatsby"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 const TSideBar = ({ isOpen, toggle }) => {
+  const { t } = useTranslation()
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -14,14 +16,14 @@ const TSideBar = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink to="/" onClick={toggle}>
-            Home
+            {t("home")}
           </SidebarLink>
           <SidebarLink to="/intro" onClick={toggle}>
-            Intro
+            {t("intro")}
           </SidebarLink>
           <Tippy content="Coming soon">
             <SidebarLink to="/" onClick={toggle}>
-              Staking
+              {t("staking")}
             </SidebarLink>
           </Tippy>
           <SidebarLinkOne
@@ -30,11 +32,11 @@ const TSideBar = ({ isOpen, toggle }) => {
             href="https://docs.g2069.com/fundamentals/introduction"
             target="_blank"
           >
-            Whitepaper
+            {t("whitepaper")}
           </SidebarLinkOne>
           <Tippy content="On 15th May 2022, 00:00 UTC">
             <SidebarLink to="/" onClick={toggle}>
-              Presale
+              {t("presale")}
             </SidebarLink>
           </Tippy>
         </SidebarMenu>
