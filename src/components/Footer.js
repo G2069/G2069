@@ -1,13 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import { FaDiscord, FaTelegram, FaTwitter } from "react-icons/fa"
 import { animateScroll as scroll } from "react-scroll"
 import Social from "../images/logo.png"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
+import { useTranslation, Link } from "gatsby-plugin-react-i18next"
 
 const Footer = () => {
+  const {t} = useTranslation()
   const toggleHome = () => {
     scroll.scrollToTop()
   }
@@ -19,18 +20,18 @@ const Footer = () => {
           <FooterLinkWrapper>
             <FooterLinkItems>
               <Tippy content= 'Coming soon'>
-              <FooterLink to="/">Staking</FooterLink>
+              <FooterLink to="/">{t("staking")}</FooterLink>
               </Tippy>
               <FooterLinkOne
                 href="https://docs.g2069.com/fundamentals/introduction"
                 target="_blank"
               >
-                Whitepaper
+                {t("whitepaper")}
               </FooterLinkOne>
               <Tippy content= 'Coming soon'>
-              <FooterLink to="/">Audit</FooterLink>
+              <FooterLink to="/">{t("audit")}</FooterLink>
               </Tippy>
-              <FooterP>Contact us: support@g2069.com</FooterP>
+              <FooterP>{t("contact")}</FooterP>
             </FooterLinkItems>
           </FooterLinkWrapper>
         </FooterLinkContainer>

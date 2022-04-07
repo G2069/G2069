@@ -2,11 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import youtubeimg from "../images/thumbnail-bighead.jpg"
 import play from "../images/play-button.png"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 const Media = () => {
+  const {t} = useTranslation()
   return (
     <Gallery>
-      <Galleryh2>Trailer</Galleryh2>
+      <Galleryh2>{t("trailer")}</Galleryh2>
       <GalleryBox>
         <GalleryVideo>
           <GalleryImg

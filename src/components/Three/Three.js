@@ -309,7 +309,7 @@ useGLTF.preload("/final-scene.glb")
 //------------------END-OF-GLB-MODEL-------------------------------------//
 
 const Three = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const flexstyle = {
     backgroundColor: "black",
@@ -355,23 +355,23 @@ const Three = () => {
             position={[1.3, 1, 0]}
             fontSize={0.5}
             color="black"
-            font="/Cyberpunk.ttf"
+            font={i18n.language === 'en' ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >
             {t("nft")}
           </Text>
           <Text
-            position={[1.3, 0.6, 0]}
+            position={i18n.language === "en" ? [1.3, 0.6, 0] : [1.3, 0.5, 0]}
             fontSize={0.5}
             color="black"
-            font="/Cyberpunk.ttf"
+            font={i18n.language === 'en' ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >
             {t("playtoearn")}
           </Text>
           <Text
-            position={[1.3, 0.15, 0]}
+            position={i18n.language === "en" ? [1.3, 0.15, 0] : [1.3, 0.02, 0]}
             fontSize={0.33}
             color="black"
-            font="/Cyberpunk.ttf"
+            font={i18n.language === 'en' ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >
             {t("conquer")}
           </Text>
@@ -379,7 +379,7 @@ const Three = () => {
             position={[1.3, -0.15, 0]}
             fontSize={0.33}
             color="black"
-            font="/Cyberpunk.ttf"
+            font={i18n.language === 'en' ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >
             {t("world")}
           </Text>

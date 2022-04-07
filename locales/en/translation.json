@@ -1,9 +1,12 @@
 {
+    "languages": "en",
     "home": "Home",
     "intro": "Intro",
     "staking":"Staking",
     "whitepaper": "Whitepaper",
     "presale":"Presale",
+    "coming":"Coming Soon",
+    "presaleMsg":"On 15th May 2022, 00:00 UTC",
     "nft":"NFT",
     "playtoearn":"Play to Earn",
     "conquer":"Conquer your metaverse",
@@ -14,5 +17,22 @@
     "days": "Days",
     "hours": "Hours",
     "minutes": "Minutes",
-    "seconds": "Seconds"
+    "seconds": "Seconds",
+    "trailer": "trailer",
+    "gheroes": "G-Heroes",
+    "gheroescap": "Collect and form your team to join PvE and PvP!",
+    "weapons": "Weapons",
+    "weaponscap": "To enhance attack damage of your G-Heroes.",
+    "rack": "Rack",
+    "rackcap": "Earn $GE by farming or renting.",
+    "seed": "Seed",
+    "seedcap": "Plant on rack and harvest to earn $GE.",
+    "ge": "$GE",
+    "gecap": "Native token of G-2069.",
+    "register": "Register to receive latest news!",
+    "audit" : "Audit",
+    "contact": "Contact us: support@g2069.com"
+
+
+    
 }

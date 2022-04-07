@@ -1,8 +1,8 @@
 import React, { useRef } from "react"
 import { Html } from "@react-three/drei"
 import { useThree } from '@react-three/fiber'
-import { Link } from "gatsby"
 import CyberButton from "./CyberButton"
+import { Link } from "gatsby-plugin-react-i18next"
 
 const Background = props => {
   const ref = useRef()

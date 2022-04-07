@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import EmailBg from "../images/email-background.png"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 const Email = () => {
+  const { t } = useTranslation()
   const [formState, setFormState] = useState({
     email: "",
   })
@@ -36,7 +38,7 @@ const Email = () => {
   return (
     <EmailContainer>
       <EmailContent>
-        <p>Register to receive latest news!</p>
+        <p>{t("register")}</p>
         <form
           onSubmit={handleSubmit}
           name="contact"
@@ -46,14 +48,14 @@ const Email = () => {
           <input type="hidden" name="form-name" value="contact" />
           <FormWrap>
             <label htmlFor="email">
-            <input
-              id="email"
-              type="email"
-              name="email"
-              onChange={handleChange}
-              value={formState.email}
-              placeholder="Enter your email"
-            />
+              <input
+                id="email"
+                type="email"
+                name="email"
+                onChange={handleChange}
+                value={formState.email}
+                placeholder="example@g2069.com"
+              />
             </label>
             <Button>
               <button className="presale-btn" type="submit">

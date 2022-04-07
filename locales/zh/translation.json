@@ -1,9 +1,12 @@
 {
+    "languages": "中文",
     "home": "主页",
     "intro": "简介",
     "staking":"质押",
     "whitepaper": "白皮书",
     "presale":"预售",
+    "coming":"即将推出",
+    "presaleMsg":"将于5月15日00:00UTC开始发售",
     "nft":"NFT",
     "playtoearn":"边玩边赚链游",
     "conquer":"征服您的元宇宙",
@@ -14,5 +17,20 @@
     "days": "天",
     "hours": "小时",
     "minutes": "分钟",
-    "seconds": "秒"
+    "seconds": "秒",
+    "trailer": "预告",
+    "gheroes": "G-英雄",
+    "gheroescap": "收集和组建您的队伍！",
+    "weapons": "武器",
+    "weaponscap": "增加G-英雄的攻击力",
+    "rack": "培养架",
+    "rackcap": "出租或种植以赚取$GE",
+    "seed": "种子",
+    "seedcap": "种植在培养架",
+    "ge": "$GE",
+    "gecap": "G-2069代币",
+    "register": "订阅以获取最新资讯",
+    "audit" : "审计",
+    "contact": "联络我们: support@g2069.com"
+
 }

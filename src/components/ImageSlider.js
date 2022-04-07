@@ -7,44 +7,46 @@ import rack from "../images/resource/g2069-rack.jpg"
 import seed from "../images/resource/g2069-seed.jpg"
 import "bootstrap/dist/css/bootstrap.min.css"
 import styled from "styled-components"
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
 
 const ImageSlider = () => {
+  const { t } = useTranslation()
   return (
     <CarouselContainer>
       <Carousel>
         <Carousel.Item>
           <img className="d-block w-100" src={heroes} alt="G2069 Heroes" />
           <Carousel.Caption>
-            <h3>G-Heroes</h3>
-            <p>Collect and form your team to join PvE and PvP!</p>
+            <h3>{t("gheroes")}</h3>
+            <p>{t("gheroescap")}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={weapons} alt="G2069 Heroes" />
           <Carousel.Caption>
-            <h3>Weapons</h3>
-            <p>To enhance your G-Heroes.</p>
+            <h3>{t("weapons")}</h3>
+            <p>{t("weaponscap")}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={rack} alt="G2069 Rack" />
           <Carousel.Caption>
-            <h3>Rack</h3>
-            <p>Earn $GE by farming or renting.</p>
+            <h3>{t("rack")}</h3>
+            <p>{t("rackcap")}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={seed} alt="G2069 Seed" />
           <Carousel.Caption>
-            <h3>Seed</h3>
-            <p>Plant on rack and harvest to earn $GE.</p>
+            <h3>{t("seed")}</h3>
+            <p>{t("seedcap")}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={energy} alt="G2069 GE" />
           <Carousel.Caption>
-            <h3>$GE</h3>
-            <p>Native token of G-2069.</p>
+            <h3>{t("ge")}</h3>
+            <p>{t("gecap")}</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
