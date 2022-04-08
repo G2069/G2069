@@ -7,7 +7,7 @@ import rack from "../images/resource/g2069-rack.jpg"
 import seed from "../images/resource/g2069-seed.jpg"
 import "bootstrap/dist/css/bootstrap.min.css"
 import styled from "styled-components"
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 const ImageSlider = () => {
   const { t } = useTranslation()

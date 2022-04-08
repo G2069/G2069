@@ -11,8 +11,8 @@ const Overlay = forwardRef(({ scroll }, ref) => (
   >
     <div style={{ height: "400vh" }}>
       <div className="dot">
-        <h1>Intro to </h1>
         <h1>G-2069</h1>
+        <h1>Intro</h1>
         Welcome to G-2069 metaverse where ancient heroes are found to be cloned
         to battle here. Players will be able to own lands to farm and trade
         harvested crops for materials to craft or upgrade heroes and weapons.
@@ -61,7 +61,7 @@ const Overlay = forwardRef(({ scroll }, ref) => (
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
-        <h1>NFTs </h1>
+        <h1>NFT </h1>
         Four types of NFTs including heroes, weapons, lands and workers from
         farming or Gatcha! Each heroes have their own affinities, classes,
         rarity, and abilities. Upgrade your weapons to stand higher chances in
@@ -96,10 +96,13 @@ const Overlay = forwardRef(({ scroll }, ref) => (
             <div className="content">
               <p>Q3 2022</p>
               <li>End of Beta Testing</li>
-              <li>PVP mode</li>
-              <li>Betting system</li>
-              <li>Launch mobile app</li>
-              <li>Intensive marketing</li>
+              <li>Release of PVP mode</li>
+              <li>Release of Betting system</li>
+              <li>Launch of mobile app</li>
+              <li>
+                Extend collaboration and partnership with PR companies and
+                influencers
+              </li>
             </div>
           </div>
           <div className="container right">

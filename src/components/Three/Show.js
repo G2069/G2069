@@ -2,6 +2,7 @@ import * as THREE from "three"
 import React, { Suspense, useRef, useEffect } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import Overlay from "./Overlay"
+import OverlayZh from "./OverlayZh"
 import "./Show.css"
 import {
   Environment,
@@ -11,6 +12,7 @@ import {
   Loader,
 } from "@react-three/drei"
 import { ThreeContainer } from "./Three"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 //------------------GLB-MODEL-------------------------------------//
 export function LvbuShow({ scroll, ...props }) {
   const group = useRef()
@@ -262,6 +264,7 @@ const Lights = () => {
 }
 
 const Show = () => {
+  const { i18n } = useTranslation()
   const flexstyle = {
     backgroundColor: "black",
   }
@@ -315,7 +318,11 @@ const Show = () => {
         dataInterpolation={p => `Loading ${p.toFixed(2)}%`} // Text
         initialState={active => active} // Initial black out state
       />
-      <Overlay ref={overlay} caption={caption} scroll={scroll} />
+      {i18n.language === "en" ? (
+        <Overlay ref={overlay} caption={caption} scroll={scroll} />
+      ) : (
+        <OverlayZh ref={overlay} caption={caption} scroll={scroll} />
+      )}
     </ThreeContainer>
   )
 }
