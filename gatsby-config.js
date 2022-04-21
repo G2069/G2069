@@ -14,12 +14,14 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
           "G-J97ZZTLCWM", // Google Analytics / GA
+          "UA-222718685-1", // Google Ads / Adwords / AW
         ],
 
         // This object is used for configuration specific to this plugin
