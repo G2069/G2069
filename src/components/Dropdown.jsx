@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import "./Dropdown.css"
+import "./dropdown.css"
 
 const linkStyle = {
   textDecoration: "none",
