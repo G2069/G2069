@@ -13,7 +13,7 @@ const Header = ({ toggle }) => {
   return (
     <Nav>
       <NavLink to="/">
-        <LogoImg src={Logo} />
+        <LogoImg src={Logo} alt="g2069-logo"/>
       </NavLink>
       <NavBars onClick={toggle}>
         <FaBars />

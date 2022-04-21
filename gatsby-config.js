@@ -42,7 +42,7 @@ module.exports = {
         localeJsonSourceName: `locale`,
         languages: [`en`, `zh`],
         defaultLanguage: `en`,
-        siteUrl: `http://localhost:8000/`,
+        siteUrl: `https://g2069.com/`,
         i18nextOptions: {
           interpolation: {
             escapeValue: false,
