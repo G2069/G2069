@@ -21,8 +21,8 @@
   "trailer": "预告",
   "gheroes": "G-英雄",
   "gheroescap": "收集和组建您的队伍！",
-  "weapons": "武器",
-  "weaponscap": "增加G-英雄的攻击力",
+  "weapons": "装备",
+  "weaponscap": "增加G-英雄的属性",
   "rack": "培养架",
   "rackcap": "出租或种植以赚取$GE",
   "seed": "种子",
@@ -31,5 +31,6 @@
   "gecap": "G-2069代币",
   "register": "订阅以获取最新资讯",
   "audit": "审计",
-  "contact": "联络我们: support@g2069.com"
+  "contact": "联络我们: support@g2069.com",
+  "language": "语言"
 }

@@ -353,23 +353,23 @@ const Three = () => {
           </Text>
           <Text
             position={[1.3, 1, 0]}
-            fontSize={0.5}
+            fontSize={i18n.language === 'en' ? 0.5 : 0.7}
             color="black"
             font={i18n.language === 'en' ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >
             {t("nft")}
           </Text>
           <Text
-            position={i18n.language === "en" ? [1.3, 0.6, 0] : [1.3, 0.5, 0]}
-            fontSize={0.5}
+            position={i18n.language === "en" ? [1.3, 0.6, 0] : [1.3, 0.37, 0]}
+            fontSize={i18n.language === 'en' ? 0.5 : 0.7}
             color="black"
             font={i18n.language === 'en' ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >
             {t("playtoearn")}
           </Text>
           <Text
-            position={i18n.language === "en" ? [1.3, 0.15, 0] : [1.3, 0.02, 0]}
-            fontSize={0.33}
+            position={i18n.language === "en" ? [1.3, 0.15, 0] : [1.3, -0.3, 0]}
+            fontSize={i18n.language === 'en' ? 0.33 : 0.55}
             color="black"
             font={i18n.language === 'en' ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >

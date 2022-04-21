@@ -1,13 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 import { FaTimes } from "react-icons/fa"
-import { Link } from "gatsby"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation, Link, useI18next } from "gatsby-plugin-react-i18next"
+
+const linkStyle = {
+  textDecoration: "none",
+  color: "white",
+}
 
 const TSideBar = ({ isOpen, toggle }) => {
   const { t } = useTranslation()
+  const { languages, originalPath } = useI18next()
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -39,6 +44,13 @@ const TSideBar = ({ isOpen, toggle }) => {
               {t("presale")}
             </SidebarLink>
           </Tippy>
+          {languages.map(lng => (
+            <SidebarSelect key={lng}>
+              <Link to={originalPath} language={lng} style={linkStyle}>
+                {lng}
+              </Link>
+            </SidebarSelect>
+          ))}
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
@@ -81,6 +93,21 @@ export const SidebarWrapper = styled.div`
 `
 
 export const SidebarLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    color: #00ffff;
+    transition: 0.2s ease-in-out;
+  }
+`
+export const SidebarSelect = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

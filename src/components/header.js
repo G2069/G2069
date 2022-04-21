@@ -1,14 +1,14 @@
 import React from "react"
+import Dropdown from "./Dropdown"
 import styled from "styled-components"
 import { FaBars } from "react-icons/fa"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 import Logo from "../images/logo.png"
-import { Link, useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import { Link, useTranslation} from "gatsby-plugin-react-i18next"
 
 const Header = ({ toggle }) => {
   const { t } = useTranslation()
-  const { languages, originalPath } = useI18next()
 
   return (
     <Nav>
@@ -19,21 +19,7 @@ const Header = ({ toggle }) => {
         <FaBars />
       </NavBars>
       <NavMenu>
-        <div class="dropdown">
-          <button class="dropbtn">{t("languages")}</button>
-          <div class="dropdown-content">
-            <ul>
-              {languages.map(lng => (
-                <li key={lng}>
-                  <Link to={originalPath} language={lng}>
-                    {lng}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
+        <Dropdown />
         <NavItem>
           <NavLink to="/">{t("home")}</NavLink>
         </NavItem>
@@ -137,46 +123,20 @@ const NavMenu = styled.ul`
   text-align: center;
   margin-right: 20px;
 
-  .dropbtn {
-    background-color: #4caf50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-
   .dropdown {
-    position: relative;
-    display: inline-block;
+    width: 100px;
+    margin: 0 auto;
   }
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content ul li {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropdown-content li:hover {
-    background-color: #f1f1f1;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+  .dropdown .dropdown-btn {
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   @media screen and (max-width: 768px) {

@@ -14,59 +14,59 @@ const Overlay = forwardRef(({ scroll }, ref) => (
         <h1>G-2069</h1>
         <h1>Intro</h1>
         Welcome to G-2069 metaverse where ancient heroes are found to be cloned
-        to battle here. Players will be able to own lands to farm and trade
-        harvested crops for materials to craft or upgrade heroes and weapons.
-        Workers will be available to players to help in land farming or collect
-        resources in factories. Heroes and weapons will be required to particate
-        in PvE and PvP. Asides from methods above, players can choose to engage
-        in the betting system for rewards.
+        and battle here. Players aim to farm, summon, enhance, battle, and build
+        their teams to conquer the metaverse. The G-2069 Metaverse is built by a
+        player-owned economy where players can truly own and trade the resources
+        and NFTs they earned through the gameplay and their contributions to the
+        ecosystem.
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
         <h1>G-heroes</h1>
-        12 unique heroes in each season will be available to be collected. Each
-        season comes with a different theme. In first season, G-heroes are
-        inspired by the heroic characteristics of three kingdom dynasty's heroes
-        and will to conquer the world, align to mission of G-2069, to save the
-        G-2069 metaverse!
+        There are 12 unique G-Heroes that players can summon in each season with
+        varying equipment and appearances. Equipment will enhance the stats of
+        G-Heroes, they will also have different values, skills, and stats.
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
         <h1>Token</h1>
-        $G102 is the primary token to the game and resides in BSC blockchain.
-        Moreover, it will serves as a deflationary token which we aim to
-        decrease its total supply overtime thru burning from token buyback and
-        token collected from minting NFTs. $G102 will serve the function for in
-        game purchase, minting NFTs, staking, governance, and betting.
+        $G102 is the primary token to the game and resides in BSC blockchain. It
+        will serves as a deflationary token which its total supply will be
+        decreased overtime thru burning from token buyback and token collected
+        from minting NFTs. $G102 will serve the function for payment, minting
+        NFTs, staking, and governance.
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
-        <h1>Load your wallet</h1>
-        In G-2069 metaverse, we are set up for the purpose to load up your
-        wallet through play-to-earn mechanism. Players will be rewarded by
-        participating in farming, PvE/PvP and betting.
+        <h1>Gameplay</h1>
+        Multiple gameplay will be available in G-2069 metaverse. From farming, ,
+        gathering resources, completing quests, unlocking in-depth storylines,
+        killing bosses, betting to PvP. Every contribution to the G-2069
+        metaverse will be rewarded respectively.
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
-        <h1>Go big or go home! </h1>
-        Betting feature will provides a medium for players to participate in
-        G-2069 without having hands-on playing while players can also choose
-        stake $G102 in the price pool and enter PvP with other players in the
-        metaverse.
+        <h1>Decentralization</h1>
+        G-2069 will gradually evolve into a decentralised organisation as
+        ownership of $G102 is dispersed. As $G102 is distributed among players
+        and stakeholders, ownership of the developer team and partnerships
+        becomes less concentrated over time. The Dev Team will be able to vote
+        on the allocation of Play to Earn and Staking rewards. This will keep
+        hostile actors from disrupting the ecosystem during its crucial early
+        stages of development.
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
         <h1>NFT </h1>
-        Four types of NFTs including heroes, weapons, lands and workers from
-        farming or Gatcha! Each heroes have their own affinities, classes,
-        rarity, and abilities. Upgrade your weapons to stand higher chances in
-        winning in matches. Expand lands to yield more rewards in a same time
-        period.
+        Four types of NFTs including heroes, equipments, racks and workers can
+        be obtained from minting or Gacha box! Each heroes have their own stats,
+        rarity, and abilities. Upgrade your equipments to stand higher chances
+        in winning in matches. Expand racks to yield more rewards !
       </div>
     </div>
     <div style={{ height: "200vh" }}>

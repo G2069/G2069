@@ -33,34 +33,34 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/locales`,
-        name: `locale`
-      }
+        name: `locale`,
+      },
     },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`,
-        languages: [`en`, `zh`,],
+        languages: [`en`, `zh`],
         defaultLanguage: `en`,
         siteUrl: `http://localhost:8000/`,
         i18nextOptions: {
           interpolation: {
-            escapeValue: false 
+            escapeValue: false,
           },
           keySeparator: false,
-          nsSeparator: false
+          nsSeparator: false,
         },
         pages: [
           {
-            matchPath: '/:lang?/blog/:uid',
+            matchPath: "/:lang?/blog/:uid",
             getLanguageFromPath: true,
           },
           {
-            matchPath: '/preview',
-            languages: ['en']
-          }
-        ]
-      }
+            matchPath: "/preview",
+            languages: ["en"],
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

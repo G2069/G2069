@@ -13,53 +13,56 @@ const OverlayZh = forwardRef(({ scroll }, ref) => (
       <div className="dot">
         <h1>G-2069</h1>
         <h1>简介</h1>
-        欢迎来到G-2069元宇宙, 在这里, 古代英雄被克隆并被召唤
-        在这里战斗。玩家将能够拥有培养架以种植种子以
-        获得$GE用来制作或升级英雄和武器。 工人将提供给玩家帮助耕作或收集
-        资源工厂。英雄和武器将需要参与
-        在PvE和PvP中。除了上述方法外,玩家还可以选择参与其中 在赌博系统中的奖励。
+        欢迎来到G-2069元宇宙, 古老的英雄将被召唤并战斗。召唤师可以进行种植,
+        召唤和强化G-英雄,
+        建立自己的团队并战斗以征服元世界。G-2069元宇宙是由玩家拥有的经济构建而成,
+        在这里玩家可以真正拥有和交易通过游戏玩法和对生态系统的贡献所获得的资源和NFT。
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
-        <h1>G-heroes</h1>
-        每个赛季将会有12个G-英雄并拥有不同的主题。在第一赛季，G-英雄的元素是启发与三国英雄的特征。
+        <h1>G-英雄</h1>
+        每个赛季将会推出12个独特的G-英雄,
+        每个赛季推出的G-英雄将会有不同的外观以及装备,
+        并且在发行以后的赛季将会只能通过市场交易获得。G-英雄将会有不同的属性和技能,
+        特定的武器也能增强G-英雄的属性。
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
         <h1>代币</h1>
-        $G102将会作为G-2069的主要代币并在币安链发行。
-        此外，它将起到通缩的象征作用，这是我们的目标
-        通过从代币回购和燃烧超时减少其总供应
-        令牌收集从铸造NFTs。$G102将用于in的功能
-        游戏购买、铸造NFTs、押注、管理和投注。
+        $G102是G-2069元宇宙的原生BEP-20币安智能链代币, 随着时间的推移,
+        我们将通过回购代币和从铸造nft收集的代币来减少其总供应。$G102可被用于平台治理投票,
+        质押, 铸造NFT和下注。
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
-        <h1>边玩边赚</h1>
-        ...
+        <h1>游戏</h1>
+        G-2069元宇宙拥有多样化的游戏模式。从种植, 收集素材, 完成任务,
+        解锁游戏剧情, 刷BOSS, 下注到PvP。所有对G-2069元宇宙的贡献都会获得奖励。
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
-        <h1>下注 </h1>
-        投注功能将为玩家提供一个参与的媒介 G-2069不需要亲身体验，玩家也可以选择
-        在价格池中投入$G102，并与其他玩家进入PvP模式 元宇宙
+        <h1>去中心化 </h1>
+        随着时间的推移, G-2069的所有权将随着$G102分配逐渐演变为去中心化的组织。
+        当$G102的拥有权变得不那么集中, 开发团队和合作伙伴的拥有权也会递减。
+        为了避免在早期发展阶段被恶意行为破坏生态系统的发展,
+        开发团队将能以Play-to-Earn奖励和质押的分配份额投票。
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
         <h1>NFT </h1>
-        四种类型的nft包括英雄、武器、土地和工人 农业或Gatcha
-        !每个英雄都有自己的特征，阶级， 稀有和能力。升级你的武器站在更高的机会
-        赢得比赛。在同一时间内扩大土地以获得更多奖励 时期。
+        玩家可以通过铸造或购买盲盒集齐四种类型的NFT包括英雄, 装备,
+        培养架和机器人! 每个G-英雄都有自己的外观, 稀有度,
+        属性和技能。通过升级您的装备能提高您赢下比赛的胜率, 并增加获得的奖励。
       </div>
     </div>
     <div style={{ height: "200vh" }}>
       <div className="dot">
-        <h1>Roadmap</h1>
+        <h1>路线图</h1>
         <div className="timeline">
           <div className="container right">
             <div className="content">
@@ -74,16 +77,16 @@ const OverlayZh = forwardRef(({ scroll }, ref) => (
             <div className="content">
               <p>Q2 2022</p>
               <li>IDO</li>
-              <li>Land and NFT sale</li>
-              <li>Alpha and beta test</li>
-              <li>Farm和PVE模式的发布</li>
-              <li>质押开放</li>
+              <li>NFT销售</li>
+              <li>内测与公测</li>
+              <li>种植和PVE模式的发布</li>
+              <li>质押上线</li>
             </div>
           </div>
           <div className="container right">
             <div className="content">
               <p>Q3 2022</p>
-              <li>End of Beta Testing</li>
+              <li>结束公测</li>
               <li>PVP模式</li>
               <li>押注系统</li>
               <li>推出IOS和安卓应用程式</li>
@@ -93,7 +96,7 @@ const OverlayZh = forwardRef(({ scroll }, ref) => (
           <div className="container right">
             <div className="content">
               <p>Q4 2022</p>
-              <li>赛季排位</li>
+              <li>巅峰赛</li>
               <li>推出新的G-英雄</li>
               <li>推出组队PvP模式</li>
               <li>开发AR和VR玩法</li>

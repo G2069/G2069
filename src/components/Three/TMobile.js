@@ -7,6 +7,7 @@ import { KernelSize } from "postprocessing"
 import { RectAreaLightUniformsLib } from "three-stdlib"
 import styled from "styled-components"
 import TBackground from "./TBackground"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 RectAreaLightUniformsLib.init()
 THREE.Vector2.prototype.equals = function (v, epsilon = 0.001) {
@@ -255,6 +256,8 @@ useGLTF.preload("/final-scene.glb")
 //------------------END-OF-GLB-MODEL-------------------------------------//
 
 const TMobile = () => {
+  const { t, i18n } = useTranslation()
+
   const flexstyle = {
     backgroundColor: "black",
   }
@@ -297,35 +300,35 @@ const TMobile = () => {
           </Text>
           <Text
             position={[0, 0.88, 0]}
-            fontSize={0.22}
+            fontSize={i18n.language === "en" ? 0.22 : 0.4}
             color="black"
-            font="/Cyberpunk.ttf"
+            font={i18n.language === "en" ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >
-            NFT
+            {t("nft")}
           </Text>
           <Text
-            position={[0, 0.7, 0]}
-            fontSize={0.22}
+            position={i18n.language === "en" ? [0, 0.7, 0] : [0, 0.5, 0]}
+            fontSize={i18n.language === "en" ? 0.22 : 0.4}
             color="black"
-            font="/Cyberpunk.ttf"
+            font={i18n.language === "en" ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >
-            Play to Earn
+            {t("playtoearn")}
           </Text>
           <Text
-            position={[0, 0.3, 0]}
-            fontSize={0.12}
+            position={i18n.language === "en" ? [0, 0.3, 0] : [0, 0.1, 0]}
+            fontSize={i18n.language === "en" ? 0.12 : 0.2}
             color="black"
-            font="/Cyberpunk.ttf"
+            font={i18n.language === "en" ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >
-            Conquer your metaverse
+            {t("conquer")}
           </Text>
           <Text
             position={[0, 0.1, 0]}
             fontSize={0.12}
             color="black"
-            font="/Cyberpunk.ttf"
+            font={i18n.language === "en" ? "/Cyberpunk.ttf" : "/bugtext.ttf"}
           >
-            world now
+            {t("world")}
           </Text>
         </Suspense>
         <TBackground />
