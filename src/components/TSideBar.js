@@ -39,11 +39,14 @@ const TSideBar = ({ isOpen, toggle }) => {
           >
             {t("whitepaper")}
           </SidebarLinkOne>
-          <Tippy content="On 15th May 2022, 00:00 UTC">
-            <SidebarLink to="/" onClick={toggle}>
-              {t("presale")}
-            </SidebarLink>
-          </Tippy>
+          <SidebarLinkOne
+            onClick={toggle}
+            a
+            href="https://www.finance.g2069.com/"
+            target="_blank"
+          >
+            {t("presale")}
+          </SidebarLinkOne>
           {languages.map(lng => (
             <SidebarSelect key={lng}>
               <Link to={originalPath} language={lng} style={linkStyle}>

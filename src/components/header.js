@@ -40,9 +40,12 @@ const Header = ({ toggle }) => {
           </NavLinkOne>
         </NavItem>
         <NavItem>
-          <Tippy content={t("presaleMsg")}>
-            <NavToolTip>{t("presale")}</NavToolTip>
-          </Tippy>
+        <NavLinkOne
+            href="https://www.finance.g2069.com/"
+            target="_blank"
+          >
+            {t("presale")}
+          </NavLinkOne>
         </NavItem>
       </NavMenu>
     </Nav>
