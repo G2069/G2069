@@ -31,8 +31,8 @@ const OverlayZh = forwardRef(({ scroll }, ref) => (
     <div style={{ height: "200vh" }}>
       <div className="dot">
         <h1>代币</h1>
-        $G102是G-2069元宇宙的原生BEP-20币安智能链代币, 随着时间的推移,
-        我们将通过回购代币和从铸造nft收集的代币来减少其总供应。$G102可被用于平台治理投票,
+        $GS是G-2069元宇宙的原生BEP-20币安智能链代币, 随着时间的推移,
+        我们将通过回购代币和从铸造NFT收集的代币来减少其总供应。$GS可被用于平台治理投票,
         质押, 铸造NFT和下注。
       </div>
     </div>

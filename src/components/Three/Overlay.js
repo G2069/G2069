@@ -32,10 +32,10 @@ const Overlay = forwardRef(({ scroll }, ref) => (
     <div style={{ height: "200vh" }}>
       <div className="dot">
         <h1>Token</h1>
-        $G102 is the primary token to the game and resides in BSC blockchain. It
+        $GS is the primary token to the game and resides in BSC blockchain. It
         will serves as a deflationary token which its total supply will be
         decreased overtime thru burning from token buyback and token collected
-        from minting NFTs. $G102 will serve the function for payment, minting
+        from minting NFTs. $GS will serve the function for payment, minting
         NFTs, staking, and governance.
       </div>
     </div>
